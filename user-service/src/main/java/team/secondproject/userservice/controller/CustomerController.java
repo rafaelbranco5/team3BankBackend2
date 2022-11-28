@@ -8,7 +8,7 @@ import team.secondproject.userservice.service.CustomerService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customers")
+    @RequestMapping("/customers")
 public class CustomerController {
 
     @Autowired
