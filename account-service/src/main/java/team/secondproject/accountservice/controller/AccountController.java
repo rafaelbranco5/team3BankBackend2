@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.*;
 import team.secondproject.accountservice.model.Account;
 import team.secondproject.accountservice.service.AccountService;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 @RestController
 @RequestMapping("/accounts")
@@ -13,6 +16,8 @@ public class AccountController {
 
     @Autowired
     private AccountService accountService;
+    private List<Account> accounts = new List<Account>(Integer customerId) {
+
 
     //TODO Tested & Working
     //@RequestBody maps the httpRequest body to transfer data onto a Java object (deserializes the JSON into a Java type)
@@ -20,7 +25,8 @@ public class AccountController {
     public Account openAccount(@RequestBody Account account) {
         System.out.println("inside createAccount in AccountController");
         System.out.println(account.toString());
-        return accountService.openAccount(account);
+        //return accountService.openAccount(account);
+        return account;
     }
 
     //TODO Tested & Working

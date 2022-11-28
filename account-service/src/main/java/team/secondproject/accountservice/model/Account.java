@@ -16,7 +16,7 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer accountId;
     // user property -> an account must belong to an user
-    private Integer userId;
+    private Integer customerId;
     private String name;
     private double balance = 0;
 
@@ -37,12 +37,12 @@ public class Account {
         this.balance = balance;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getCustomerId() {
+        return customerId;
     }
 
     public void setUserId(Integer userId) {
-        this.userId = userId;
+        this.customerId = userId;
     }
 
     public String getName() {
@@ -57,7 +57,7 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "accountId=" + accountId +
-                ", userId=" + userId +
+                ", userId=" + customerId +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
                 '}';
