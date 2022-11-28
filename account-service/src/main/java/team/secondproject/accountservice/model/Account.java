@@ -6,20 +6,26 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name="account")
+//@Entity
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@Table(name="account")
 public class Account {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer accountId;
     // user property -> an account must belong to an user
     private Integer customerId;
     private String name;
     private double balance = 0;
 
+    public Account(Integer accountId, Integer customerId, String name, double balance) {
+        this.accountId = accountId;
+        this.customerId = customerId;
+        this.name = name;
+        this.balance = balance;
+    }
 
     public Integer getAccountId() {
         return accountId;
